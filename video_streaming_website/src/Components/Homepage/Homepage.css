@@ -1,0 +1,55 @@
+#Homepage{
+    margin-top: 100px;
+}
+
+/* Horizontal scroll for the homepage  */
+.horizontal-scroll-homepage {
+    display: flex;
+    height: 320px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 20px;
+    align-items: center;
+}
+.horizontal-scroll-homepage::-webkit-scrollbar {
+    display: none;
+}
+
+/* top section of the home(most trending video section) */
+.most-trending-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 1em 2em 2em 2em;
+    gap: 0.5em;
+
+}
+.most-trending-video .video-embedd{
+    background-color: brown;
+    border-radius: 10px;
+    height: fit-content;
+}
+.most-trending-video div{
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.most-trending-video div p{
+    font-size: 4em;
+}
+
+/* recommended for the user section */
+.recommended-for-you{
+    padding: 10px;
+}
+.recommended-for-you-videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em 3em;
+}
