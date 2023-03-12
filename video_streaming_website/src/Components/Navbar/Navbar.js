@@ -49,7 +49,7 @@ const Navbar = (props) => {
                     closeNavbar();
                   }}
                 >
-                  {matches ? <i class='bx bx-category' ></i> : "Categories"}
+                  {matches ? <i class='bx bx-category' style={{fontSize:"25px"}}></i> : "Categories"}
                 </a>
               </li>
               <li className="menu-item">
@@ -60,7 +60,7 @@ const Navbar = (props) => {
                     props.showNotifModal();
                   }}
                 >
-                  {matches ? <i class='bx bx-bell' ></i> : "Notifcations"}
+                  {matches ? <i class='bx bx-bell' style={{fontSize:"25px"}}></i> : "Notifcations"}
                 </a>
               </li>
             </ul>

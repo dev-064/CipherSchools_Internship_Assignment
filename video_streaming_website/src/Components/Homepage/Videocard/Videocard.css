@@ -12,6 +12,8 @@
     flex: 0 0 320px;
     scroll-snap-align: start;
     cursor: pointer;
+    box-shadow: 1px -3px 68px -21px rgba(255, 255, 255, 0.59) inset;
+
 }
 
 .video-card .video-card-content {
