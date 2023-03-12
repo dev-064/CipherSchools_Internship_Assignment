@@ -11,7 +11,20 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
 
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #30ff00);
+    border-radius: 6px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #00c6ff, transparent);
+}
 html {
     font-size: 100%;
     box-sizing: inherit;

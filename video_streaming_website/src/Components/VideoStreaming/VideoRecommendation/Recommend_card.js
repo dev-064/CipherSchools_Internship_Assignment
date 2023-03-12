@@ -9,7 +9,7 @@ const Recommend_card = () => {
     <div className="r-video-card">
       <div className="r-video-thumbnail" style={mystyle}></div>
       <div className="r-video-info">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+        <p>Lorem ipsum dolor, sit amet consectetur</p>
         <div className="r-stats">
           <div classNames="r-likes">
             <i class="bx bxs-like"></i>&nbsp;&nbsp;30K&nbsp;&nbsp;|&nbsp;&nbsp;

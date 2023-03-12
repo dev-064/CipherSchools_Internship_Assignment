@@ -20,9 +20,7 @@ const Homepage = () => {
           <Videocard id={"Wv2rLZmbPMA"} likes={"9k"} comments={"2k"} watch={80} title={"Lorem ipsum dolor sit"}/>
           <Videocard id={"gS9o1FAszdk"} likes={"1.4k"} comments={"5k"} watch={43} title={"Lorem ipsum dolor sit"}/>
           <Videocard id={"gS9o1FAszdk"} likes={"1.4k"} comments={"5k"} watch={43} title={"Lorem ipsum dolor sit"}/>
-          <Videocard id={"gS9o1FAszdk"} likes={"1.4k"} comments={"5k"} watch={43} title={"Lorem ipsum dolor sit"}/>
-          <Videocard id={"gS9o1FAszdk"} likes={"1.4k"} comments={"5k"} watch={43} title={"Lorem ipsum dolor sit"}/>
-          <Videocard id={"gS9o1FAszdk"} likes={"1.4k"} comments={"5k"} watch={43} title={"Lorem ipsum dolor sit"}/>
+          <Videocard id={"Wv2rLZmbPMA"} likes={"9k"} comments={"2k"} watch={80} title={"Lorem ipsum dolor sit"}/>
         </div>
       </div>
       <div className="recommended-for-you">

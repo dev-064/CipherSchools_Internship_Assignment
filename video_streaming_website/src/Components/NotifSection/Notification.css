@@ -1,0 +1,9 @@
+.notification{
+    text-align: left;
+    padding: 10px;
+    padding-top: 20px;
+
+}
+.notification p{
+    font-size: 17px;
+}

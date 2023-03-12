@@ -1,0 +1,10 @@
+.shareModal{
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.shareModal i{
+    font-size: 30px;
+}

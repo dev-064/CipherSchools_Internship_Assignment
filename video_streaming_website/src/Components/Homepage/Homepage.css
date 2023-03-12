@@ -41,15 +41,51 @@
 .most-trending-video div p{
     font-size: 4em;
 }
-
+/* continue watching section */
+.continue-watching-section{
+    padding:0px 10px;
+}
 /* recommended for the user section */
 .recommended-for-you{
     padding: 10px;
 }
 .recommended-for-you-videos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 10px;
+    display: grid;
+    /* place-items: center; */
+    justify-content: center;
     align-items: center;
-    gap: 1.5em 3em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
+@media screen and (max-width: 1300px) {
+    .recommended-for-you-videos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+@media screen and (max-width: 1050px) {
+    .recommended-for-you-videos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+@media screen and (max-width: 660px) {
+    .recommended-for-you-videos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .continue-watching-section{
+        display: none;
+    }
+    .recommended-for-you h2{
+        display: none;
+    }
+  }
+  
+@media screen and (max-width: 900px) {
+    .most-trending-video{
+        display: none;
+    }
+  }
+  

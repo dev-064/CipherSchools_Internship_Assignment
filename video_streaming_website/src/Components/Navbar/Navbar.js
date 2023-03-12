@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
-const Navbar = () => {
+import { Link } from "react-router-dom";
+const Navbar = (props) => {
   const toggleNavbar = () => {
     document.getElementById("menu").classList.toggle("is-active");
     document.getElementById("burger").classList.toggle("is-active");
@@ -11,72 +12,60 @@ const Navbar = () => {
   };
   return (
     <div>
-      <header class="header" id="header">
-        <nav class="navbar container">
-          <a href="#" class="brand">
+      <header className="header" id="header">
+        <nav className="navbar container">
+          <Link to="/" className="brand">
             Streamverse
-          </a>
-          <div class="search">
-            <form class="search-form">
+          </Link>
+          <div className="search">
+            <form className="search-form">
               <input
                 type="text"
                 name="search"
-                class="search-input"
+                className="search-input"
                 placeholder="Search"
                 autofocus
               />
-              <button type="submit" class="search-submit" disabled>
-                <i class="bx bx-search"></i>
+              <button type="submit" className="search-submit" disabled>
+                <i className="bx bx-search"></i>
               </button>
             </form>
           </div>
-          <div class="menu" id="menu">
-            <ul class="menu-inner">
-              <li class="menu-item">
+          <div className="menu" id="menu">
+            <ul className="menu-inner">
+              <li className="menu-item">
                 <a
-                  href="#"
-                  class="menu-link"
+                  className="menu-link"
                   onClick={() => {
                     closeNavbar();
                   }}
                 >
-                  Categories
+                  <i class='bx bx-category' ></i>
                 </a>
               </li>
-              <li class="menu-item">
+              <li className="menu-item">
                 <a
-                  href="#"
-                  class="menu-link"
+                  className="menu-link"
                   onClick={() => {
                     closeNavbar();
+                    props.showNotifModal();
                   }}
                 >
-                  Profile
-                </a>
-              </li>
-              <li class="menu-item">
-                <a
-                  href="#"
-                  class="menu-link"
-                  onClick={() => {
-                    closeNavbar();
-                  }}
-                >
-                  Notif
+                  <i class='bx bx-bell' ></i>
                 </a>
               </li>
             </ul>
           </div>
           <div
-            class="burger"
+            className="burger"
             id="burger"
             onClick={() => {
               toggleNavbar();
             }}
           >
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
           </div>
         </nav>
       </header>

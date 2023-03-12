@@ -14,22 +14,26 @@
     flex-direction: column;
     overflow-y: scroll;
 }
-.video-player-section::-webkit-scrollbar{
+
+.video-player-section::-webkit-scrollbar {
     display: none;
 }
+
 .video-player {
     width: 90%;
-    height: 400px;
+    height: 450px;
 }
 
 .video-information {
     padding: 20px 0px;
     width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .video-information p {
-    font-size: 1.7rem;
-    font-weight: 900;
+    font-size: 1.3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -60,7 +64,7 @@
 }
 
 .custom-btn {
-    width: 90px;
+    width: 100px;
     height: 30px;
     border-radius: 5px;
     font-family: 'Lato', sans-serif;
@@ -70,83 +74,168 @@
     transition: all 0.3s ease;
     position: relative;
     display: flex;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
     border: none;
-    color:black;
+    color: black;
+    justify-content: center;
+    align-items: center;
 }
+
 /* Comments Section of the video */
-.comments-section{
+.comments-section {
     width: 90%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px 0px;
+    padding: 15px 0px;
 }
-.my-input{
+
+.my-input {
     font-size: 25px;
     display: flex;
     gap: 10px;
 }
-.comments-section input{
+
+.comments-section input {
     color: white;
     width: 90%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid white;
 }
-.Comments{
+
+.Comments {
     padding: 20px 0px;
 }
-.user-comment p{
+
+.user-comment p {
     padding: 20px;
 }
-.user-info{
+
+.user-info {
     display: flex;
     align-items: center;
     margin-left: -35px;
     gap: 10px;
 }
-.user-pic{
+
+.user-pic {
     height: 30px;
     width: 30px;
     background-color: blue;
     border-radius: 50%;
 }
-.post-time{
-    color:rgba(255, 255, 255, 0.505);
+
+.post-time {
+    color: rgba(255, 255, 255, 0.505);
     font-size: 15px;
     margin: -3px 0px -10px 5px;
+    text-align: left;
+}
 
-}
-.user-content{
+.user-content {
     padding: 20px;
+    text-align: left;
 }
-.replies{
+
+.replies {
     margin-left: 90px;
     width: 80%;
 }
+
 /* Video suggestion section of a particular video played */
 .video-suggestion-section {
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
 }
-.r-video-card{
+
+.r-video-card {
     display: flex;
     padding: 10px 0px;
+    padding-right: 12px;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.r-video-thumbnail{
+
+.r-video-thumbnail {
     height: 70px;
     width: 70px;
 }
-.r-video-info{
+
+.r-video-info {
     display: flex;
     flex-direction: column;
 }
-.r-stats{
+
+.r-stats {
     display: flex;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 650px) {
+    #StreamPage {
+        grid-template-columns: 100%;
+        margin-top: 120px;
+    }
+    .video-player {
+        width: 100%;
+        height: 300px;
+    }
+
+    .video-suggestion-section {
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    .r-video-card {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .video-information {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 10px;
+        margin-bottom: -13px;
+
+    }
+
+    .comment-pallete-mobile {
+        padding: 10px;
+        background-color: rgb(105 101 101 / 16%);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 95%;
+        border-radius: 20px;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .comment-pallete-mobile p {
+        font-size: 20px;
+        padding: 5px 0px;
+    }
+
+    .comment-pallete-mobile .comment-mobile {
+        color: aliceblue;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    #StreamPage {
+        margin-top: 120px;
+    }
+
 }
