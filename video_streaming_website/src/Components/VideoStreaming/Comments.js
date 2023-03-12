@@ -1,13 +1,17 @@
-import React from "react";
+import { React, useState } from "react";
 
-const Comments = () => {
+const Comments = (props) => {
+  const [replies, setreplies] = useState(false);
   return (
     <>
       <div className="comments-section">
-        <div className="my-input">
-          <label>Comments:</label>
-          <input type="text" placeholder="Add Your Comment" />
-        </div>
+        {!props.matchsize ? (
+          <div className="my-input">
+            <label>Comments:</label>
+            <input type="text" placeholder="Add Your Comment" />
+            <i class="bx bx-upload" style={{ color: "white" }}></i>
+          </div>
+        ) : null}
         <div className="Comments">
           <div className="user-comment">
             <div className="user-info">
@@ -20,8 +24,24 @@ const Comments = () => {
               impedit odio adipisci officia blanditiis iusto error repudiandae
               atque nam quidem.
             </div>
-            <p>Replies</p>
-            <div className="replies">
+            <p
+              onClick={() => {
+                if (replies) {
+                  setreplies(false);
+                } else {
+                  setreplies(true);
+                }
+              }}
+              style={{cursor:"pointer"}}
+            >
+              Replies&nbsp;&nbsp;
+              {replies ? (
+                <i class="bx bxs-down-arrow"></i>
+              ) : (
+                <i class="bx bxs-up-arrow"></i>
+              )}
+            </p>
+           {replies &&  <div className="replies">
               <div className="reply user-info">
                 <div className="reply user-pic"></div>
                 <div className="reply user-name">Ketanzz</div>
@@ -32,7 +52,7 @@ const Comments = () => {
                 Laborum, est eos error natus recusandae voluptates modi
                 explicabo rerum rem? Nemo.
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>

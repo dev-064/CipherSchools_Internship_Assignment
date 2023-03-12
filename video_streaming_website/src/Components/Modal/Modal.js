@@ -2,7 +2,8 @@ import React from "react";
 import "./Modal.css";
 function Modal(props) {
   const mystyle={
-    height:"fit-content",
+    height:`${props.height}`,
+    width:`${props.width}`
   }
   return (
     props.show && (
@@ -15,7 +16,7 @@ function Modal(props) {
           }
         }}
       >
-        <div className="modal-content" style={props.shareModal ? mystyle : {height:"60%"}}>
+        <div className="modal-content" style={mystyle}>
           <div class="modal-external-content">{props.children}</div>
         </div>
       </div>

@@ -1,9 +1,9 @@
-.notification{
+.notification {
     text-align: left;
-    padding: 10px;
-    padding-top: 20px;
+    padding: 20px 30px 20px 30px;
 
 }
-.notification p{
+
+.notification p {
     font-size: 17px;
 }

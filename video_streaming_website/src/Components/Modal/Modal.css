@@ -20,22 +20,16 @@
 
 .modal-content {
   height: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   z-index: 1000001;
   overflow-y: scroll;
   /* background-color: rgba(10, 168, 31, 0.692); */
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(82, 179, 255, 0.45);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(0, 0, 0, 0.45);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  width: 50%;
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -55,7 +49,6 @@
 }
 
 .modal-external-content {
-  padding: 2em;
   padding-top: 0.5em;
   display: flex;
   justify-content: center;
@@ -79,12 +72,14 @@
   }
 
 }
+
 @media screen and (max-width:580px) {
   .modal-content {
     width: 80%;
   }
 
 }
+
 @media screen and (max-width:380px) {
   .modal-content {
     width: 90%;

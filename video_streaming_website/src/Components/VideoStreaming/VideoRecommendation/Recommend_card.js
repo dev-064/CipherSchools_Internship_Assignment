@@ -1,12 +1,16 @@
 import React from "react";
-
-const Recommend_card = () => {
-    const mystyle = {
-        backgroundImage: `url(http://img.youtube.com/vi/Vd5vz9vNYY0/hqdefault.jpg)`,
-        backgroundSize: "Cover",
-      };
+import { useNavigate } from "react-router-dom";
+const Recommend_card = (props) => {
+  const mystyle = {
+    backgroundImage: `url(http://img.youtube.com/vi/${props.id}/hqdefault.jpg)`,
+    backgroundSize: "Cover",
+  };
+  const navigate = useNavigate();
   return (
-    <div className="r-video-card">
+    <div className="r-video-card" onClick={()=>{
+      window.location.reload(true);
+      navigate("/stream" ,{state:props.id})
+    }}>
       <div className="r-video-thumbnail" style={mystyle}></div>
       <div className="r-video-info">
         <p>Lorem ipsum dolor, sit amet consectetur</p>

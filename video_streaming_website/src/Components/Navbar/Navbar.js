@@ -1,7 +1,16 @@
-import React from "react";
+import {React,useState,useEffect} from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 const Navbar = (props) => {
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 575px)").matches
+  );
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 575px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+
   const toggleNavbar = () => {
     document.getElementById("menu").classList.toggle("is-active");
     document.getElementById("burger").classList.toggle("is-active");
@@ -40,7 +49,7 @@ const Navbar = (props) => {
                     closeNavbar();
                   }}
                 >
-                  <i class='bx bx-category' ></i>
+                  {matches ? <i class='bx bx-category' ></i> : "Categories"}
                 </a>
               </li>
               <li className="menu-item">
@@ -51,7 +60,7 @@ const Navbar = (props) => {
                     props.showNotifModal();
                   }}
                 >
-                  <i class='bx bx-bell' ></i>
+                  {matches ? <i class='bx bx-bell' ></i> : "Notifcations"}
                 </a>
               </li>
             </ul>

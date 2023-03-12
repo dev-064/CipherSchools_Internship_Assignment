@@ -7,11 +7,11 @@ import { useEffect } from "react";
 const Stream = (props) => {
   const location = useLocation();
   const [matches, setMatches] = useState(
-    window.matchMedia("(min-width: 900px)").matches
+    window.matchMedia("(min-width: 650px)").matches
   );
   useEffect(() => {
     window
-      .matchMedia("(min-width: 900px)")
+      .matchMedia("(min-width: 650px)")
       .addEventListener("change", (e) => setMatches(e.matches));
   }, []);
 
@@ -41,11 +41,11 @@ const Stream = (props) => {
             <button
               className="comments-information custom-btn"
               onClick={() => {
-                props.showshareModal();
-                props.videokeychange(location.state);
+                navigator.clipboard.writeText(`https://youtu.be/${location.state}`);
+                alert("Link copied to clipboard");
               }}
             >
-              <div className="comment icon">
+              <div className="comment icon" >
                 <i class="bx bx-share"></i>
               </div>
               <div className="count">Share</div>
@@ -66,19 +66,42 @@ const Stream = (props) => {
             </p>
           </div>
         ) : (
-          <Comments />
+          <>
+            <div className="comments-section">
+              <div className="my-input">
+                <label>Comments:</label>
+                <input type="text" placeholder="Add Your Comment" />
+                <i class='bx bx-upload' style={{color:"white"}}></i>
+              </div>
+            </div>
+            <Comments matchsize={matches} />
+            <Comments matchsize={matches} />
+            <Comments matchsize={matches} />
+            <Comments matchsize={matches} />
+            <Comments matchsize={matches} />
+            <Comments matchsize={matches} />
+            <Comments matchsize={matches} />
+          </>
         )}
       </div>
       <div className="video-suggestion-section">
         <p>Recommended to you</p>
-        <Recommend_card />
-        <Recommend_card />
-        <Recommend_card />
-        <Recommend_card />
-        <Recommend_card />
-        <Recommend_card />
-        <Recommend_card />
-        <Recommend_card />
+        <Recommend_card id={"n1vu0uX47io"}/>
+        <Recommend_card id={"VR65wpYlt7U"}/>
+        <Recommend_card id={"Se9oxPJdiUs"}/>
+        <Recommend_card id={"iu2Fhxinm5s"}/>
+        <Recommend_card id={"KLTMCPzRO64"}/>
+        <Recommend_card id={"0ulEizUvoM8"}/>
+        <Recommend_card id={"c-x2exgJKvU"}/>
+        <Recommend_card id={"s0mjO2RI4pE"}/>
+        <Recommend_card id={"Ct5kU0w1Vgk"}/>
+        <Recommend_card id={"Qfr8XF8QQlY"}/>
+        <Recommend_card id={"8nwAiWrKW3k"}/>
+        <Recommend_card id={"jGp7tpSScj4"}/>
+        <Recommend_card id={"CotEVlabX_c"}/>
+        <Recommend_card id={"w4eo8xEf0Ec"}/>
+        <Recommend_card id={"xDWStmC94Rk"}/>
+        <Recommend_card id={"6kXHUltXW0I"}/>
       </div>
     </div>
   );
