@@ -9,7 +9,6 @@ const Comments = (props) => {
           <div className="my-input">
             <label>Comments:</label>
             <input type="text" placeholder="Add Your Comment" />
-            <i class="bx bx-upload" style={{ color: "white" }}></i>
           </div>
         ) : null}
         <div className="Comments">

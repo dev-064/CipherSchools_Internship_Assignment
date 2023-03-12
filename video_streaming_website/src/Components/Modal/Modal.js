@@ -17,7 +17,10 @@ function Modal(props) {
         }}
       >
         <div className="modal-content" style={mystyle}>
-          <div class="modal-external-content">{props.children}</div>
+          <div className="closing-cross" onClick={()=>{
+            props.close_modal();
+          }}>X</div>
+          <div className="modal-external-content">{props.children}</div>
         </div>
       </div>
     )

@@ -23,7 +23,7 @@
     width: 90%;
     height: 450px;
     position: relative;
-    box-shadow: 1px -3px 68px -21px rgba(255,255,255,0.59);
+    box-shadow: 1px -3px 68px -21px rgba(255, 255, 255, 0.59);
 }
 
 .video-information {
@@ -92,6 +92,7 @@
 .my-input {
     font-size: 25px;
     display: flex;
+    margin-top: 13px;
     gap: 10px;
 }
 
@@ -121,8 +122,8 @@
 .user-pic {
     height: 30px;
     width: 30px;
-    background: rgb(203,26,26);
-background: radial-gradient(circle, rgba(203,26,26,1) 0%, rgba(221,185,55,1) 54%, rgba(67,94,0,1) 100%);
+    background: rgb(203, 26, 26);
+    background: radial-gradient(circle, rgba(203, 26, 26, 1) 0%, rgba(221, 185, 55, 1) 54%, rgba(67, 94, 0, 1) 100%);
     border-radius: 50%;
 }
 
